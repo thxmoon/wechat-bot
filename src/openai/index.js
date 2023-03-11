@@ -12,7 +12,7 @@ const openai = new OpenAIApi(configuration)
 export async function getOpenAiReply(prompt) {
   console.log('🚀🚀🚀 / prompt', prompt)
   const response = await openai.createCompletion({
-    model: 'text-davinci-003',
+    model: 'gpt-3.5-turbo',
     prompt: prompt,
     temperature: 0.9, // 每次返回的答案的相似度0-1（0：每次都一样，1：每次都不一样）
     max_tokens: 4000,
